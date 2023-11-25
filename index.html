@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Importación de librerías -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <!--<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>-->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"></script>
+      <link rel="stylesheet" href="Css/Stiles.css">
+    <script src="script.js"></script>
+    <title>Tú Peliculas</title>
+
+
+    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Tu Pelicula</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#comentario">Comentarios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contacto">Contacto</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" id="buscador" placeholder="Busca tú pelicula...">
+              <button class="btn btn-outline-success" type="button" onclick="buscarPelicula()">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+       <!--Carrusel-->
+    <div
+    id="carouselExampleControls"
+    class="carousel slide"
+    data-bs-ride="carousel"
+  >
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="Imagenes/peliculas-skyshowtime-2023-2982962.webp"
+          class="d-block w-100"
+          alt="dfgdf"
+          height="530"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="Imagenes/20211222142251_1.jpg"
+          class="d-block w-100"
+          alt="..."
+          height="530"
+        />
+      </div>
+      <div class="carousel-item">
+        <img
+          src="Imagenes/15669240474164.jpg"
+          class="d-block w-100"
+          alt="..."
+          height="530"
+        />
+      </div>
+    </div>
+    <button
+      class="carousel-control-prev"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button
+      class="carousel-control-next"
+      type="button"
+      data-bs-target="#carouselExampleControls"
+      data-bs-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+      
+
+  <!--Body-->
+
+  <main>
+    <div class="peliculas">
+      <div class="pelicula">
+        <img
+          class="card-img-top"
+          src="Imagenes/kuf6dutpsT0vSVehic3EZIqkOBt.jpg"
+          alt="Imagen de la película"
+        />
+        <h2 style="font-size: 32px">Puss in Boots</h2>
+        <h5>Año de lanzamiento: 2004</h5>
+        <p>El Gato con Botas descubre que su pasión por la aventura le ha pasado factura: ha quemado ocho de sus nueve vidas, 
+          dejándolo con solo una vida. Puss emprende un viaje épico para encontrar el mítico Last Wish y restaurar sus nueve vidas.</p>
+      </div>
+      <div class="pelicula">
+        <img
+          class="card-img-top"
+          src="Imagenes/vZloFAK7NmvMGKE7VkF5UHaz0I.jpg"
+          alt="Imagen de la película"
+        />
+        <h2 style="font-size: 32px">Jhon Wick 4</h2>
+        <h5>Año de lanzamiento: 2023</h5>
+        <p>Con el precio por su cabeza cada vez más alto, John Wick descubre un camino para derrotar a La Mesa Alta. Pero antes de que pueda ganar su libertad, 
+          Wick debe enfrentarse a un nuevo enemigo con poderosas alianzas en todo el mundo y fuerzas que convierten a viejos amigos en enemigos.</p>
+      </div>
+      <div class="pelicula">
+        <img
+          class="card-img-top"
+          src="Imagenes/t6HIqrRAclMCA60NsSmeqe9RmNV.jpg"
+          alt="Imagen de la película"
+        />
+        <h2 style="font-size: 32px">Avatar</h2>
+        <h5>Año de lanzamiento: 2022</h5>
+        <p>Ambientada más de una década después de los acontecimientos de la primera película, conoce la historia de la familia Sully (Jake, Neytiri y sus hijos), los problemas que les 
+          persiguen, los esfuerzos que hacen para mantenerse a salvo, las batallas que libran para seguir con vida y las tragedias que soportan.</p>
+      </div>
+      <div class="pelicula">
+        <img
+          class="card-img-top"
+          src="Imagenes/qNBAXBIQlnOThrVvA6mA2B5ggV6.jpg"
+          alt="Imagen de la película"
+        />
+        <h2 style="font-size: 32px">The super mario Bross</h2>
+        <h5>Año de lanzamiento: 2023</h5>
+        <p>Mientras trabajan bajo tierra para arreglar una tubería de agua, los fontaneros de Brooklyn -y hermanos- Mario y Luigi son transportados por una misteriosa tubería y se adentran en un nuevo mundo mágico.
+           Pero cuando los hermanos se separan, Mario se embarca en una búsqueda épica para encontrar a Luigi.</p>
+      </div>
+      <div class="pelicula">
+        <img
+          class="card-img-top"
+          src="Imagenes/qi9r5xBgcc9KTxlOLjssEbDgO0J.jpg"
+          alt="Imagen de la película"
+        />
+        <h2 style="font-size: 32px">Plane</h2>
+        <h5>Año de lanzamiento: 2023</h5>
+        <p>Tras un heroico trabajo de aterrizaje con éxito de su avión dañado por la tormenta en una zona de guerra, 
+          un intrépido piloto se encuentra entre las agendas de múltiples milicias que planean tomar el avión y a sus pasajeros como rehenes.</p>
+      </div>
+      <div class="pelicula">
+        <img
+          class="card-img-top"
+          src="Imagenes/pFlaoHTZeyNkG83vxsAJiGzfSsa.jpg"
+          alt="Imagen de la película"
+        />
+        <h2 style="font-size: 32px">Black Adam</h2>
+        <h5>Año de lanzamiento: 2022</h5>
+        <p>Casi 5.000 años después de que se le otorgaran los poderes omnipotentes de los dioses egipcios -y de que fuera encarcelado con la misma rapidez-, 
+          Adán Negro es liberado de su tumba terrenal, dispuesto a desatar su particular forma de justicia en el mundo moderno.</p>
+      </div>
+      <div class="pelicula">
+        <img
+          class="card-img-top"
+          src="Imagenes/mIBCtPvKZQlxubxKMeViO2UrP3q.jpg"
+          alt="Imagen de la película"
+        />
+        <h2 style="font-size: 32px">Evil Dead Rise</h2>
+        <h5>Año de lanzamiento: 2023</h5>
+        <p>Dos hermanas encuentran un antiguo vinilo que da origen a demonios sedientos de sangre que campan a sus anchas en un edificio de apartamentos de 
+          Los Ángeles y las empuja a una batalla primigenia por la supervivencia mientras se enfrentan a la versión más pesadillesca de la familia que se pueda imaginar.</p>
+      </div>
+      <div class="pelicula">
+        <img
+          class="card-img-top"
+          src="Imagenes/jwMMQR69Xz9AYtX4u2uYJgfAAev.jpg"
+          alt="Imagen de la película"
+        />
+        <h2 style="font-size: 32px">Fast</h2>
+        <h5>Año de lanzamiento: 2021</h5>
+        <p>A lo largo de muchas misiones y contra pronósticos imposibles, Dom Toretto y su familia han sido más astutos, más nerviosos y han superado a todos los enemigos que se han cruzado en su camino. Ahora, se enfrentan al oponente más letal al que jamás se han enfrentado: Una aterradora amenaza que emerge de las sombras del pasado, alimentada por la venganza de sangre, 
+          y que está decidida a destrozar esta familia y destruir todo -y a todos- lo que Dom ama, para siempre.</p>
+      </div>
+      <div class="pelicula">
+        <img
+          class="card-img-top"
+          src="Imagenes/cvsXj3I9Q2iyyIo95AecSd1tad7.jpg"
+          alt="Imagen de la película"
+        />
+        <h2 style="font-size: 32px">Creed</h2>
+        <h5>Año de lanzamiento: 2022</h5>
+        <p>Tras dominar el mundo del boxeo, Adonis Creed ha prosperado tanto en su carrera como en su vida familiar. Cuando un amigo de la infancia y antiguo prodigio del boxeo, Damian Anderson, reaparece tras cumplir una larga condena en prisión, está ansioso por demostrar que merece su oportunidad en el ring. El enfrentamiento entre antiguos amigos es algo más que una pelea. Para saldar cuentas,
+           Adonis debe poner en juego su futuro para enfrentarse a Damian, un boxeador que no tiene nada que perder.</p>
+      </div>
+      <div class="pelicula">
+        <img
+          class="card-img-top"
+          src="Imagenes/2lUYbD2C3XSuwqMUbDVDQuz9mqz.jpg"
+          alt="Imagen de la película"
+        />
+        <h2 style="font-size: 32px">The Devil Conspiracy</h2>
+        <h5>Año de lanzamiento: 2022</h5>
+        <p>La empresa de biotecnología más puntera del mundo ha descubierto que puede clonar de entre los muertos a las personas más influyentes de la historia. Ahora, están subastando clones de Miguel Ángel, Galileo, Vivaldi y otros por decenas de millones de dólares a los ultrarricos del mundo.
+           Pero cuando roban la Sábana Santa y clonan el ADN de Jesucristo, se desata el infierno.</p>
+      </div>
+    </div>
+  </main>
+
+  <!--comentarios-->
+  <div class="title-comentarios" id="comentario">
+    <h1> Comentarios </h1>
+  </div> 
+  <div id="contendor">
+    <label for="name">Nombre:</label> <input type="text" id="name" />
+    <label for="email">Email:</label> <input type="email" id="email" />
+    <label for="comment">Comentario:</label>
+    <textarea id="comment"></textarea>
+    <button onclick="guardarDatos()">Enviar</button>
+    <button type="button" onclick="borrarComentarios()">
+      Borrar comentarios
+    </button>
+    <div id="mensajes"></div>
+  </div>
+  <div id="contenedor-comentarios"></div>
+
+<!--Cargue de comentarios-->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      mostrarComentarios();
+    });
+  </script>
+
+  <!--footer-->
+  <footer class="bg-dark text-light" id="Contacto">
+    <div class="container py-4">
+      <div class="row">
+        <div class="col-md-6">
+          <h3>Contacto</h3>
+          <p>Si deseas Agregar una pelicula escribenos a : </p>
+          <p>Teléfono o Whatssap: 3506987956</p>
+          <p>Email: infoTupelicula@yopmail.com</p>
+        </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body></html>
+      
+      
+    
